@@ -1,41 +1,80 @@
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="assest/images/icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-
-  <meta name="theme-color" content="#fafafa">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sportnews</title>
 </head>
-
 <body>
+<header>
+  <h1><strong>Sportnews</strong></h1>
+  <p><em>always in game</em></p>
+  <a href="#inst" onclick="window.open('https://www.instagram.com/'+ window.location.href +'')">Instagram</a>
+  <a href="#twitter" onclick="window.open('https://twitter.com/?lang=ru'+ window.location.href +'')">Twitter</a>
+  <a href="#facebook" onclick="window.open('https://ru-ru.facebook.com/'+ window.location.href +'')">Facebook</a>
+  <a href="#vk" onclick="window.open('https://vk.com/'+ window.location.href +'')">VK</a>
+  <a href="tel:+72283221337">  +7 (228) 322 13 37</a>
+  <nav>
+    <ul>
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">О нас</a></li>
+      <li><a href="#">Контакты</a></li>
+      <li><a href="#">Поиск</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+<main>
+  <section>
+    <h2> Основные новости </h2>
+    <p> Последние события </p>
+  </section>
+  <section>
+    <h2>Киберспорт</h2>
+    <p> Новости о виртуальном спорте</p>
+  </section>
+  <section>
+    <h2>Расписание матчей</h2>
+    <p>Дополнительная информация.</p>
+  </section>
+  <aside>
+    <h4> ASCII-рисуночек: </h4>
+    <pre>
+  ⚽
+     / \
+    /   \
+   /_____\
+   |  |  |
+   |  |  |
+   |  |  |
+   |  |  |
+   |__|__|
+    </pre>
+  </aside>
+  <article>
+    <h2>Сниппет кода:</h2>
+    <p><dfn>не знаю для чего, по заданию нужно было</dfn></p>
+  <code>
+    function greet() {
+    console.log("Спорт - сила!");
+    }
+  </code>
+  </article>
+  <section>
+    <h2>Цитата:</h2>
+  <blockquote>
+    <q><em>Одна ошибка и ты ОШИБСЯ</em></q>
+    <cite>-Криштиану Роналду</cite>
+  </blockquote>
+  </section>
+  <section>
+    <h2> Формула: </h2>
+  </section>
+  <p>Скорость света в вакууме: <sup>c</sup> = <em>299,792,458</em> м/с<sup>2</sup></p>
+</main>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+<footer>
+  <p>&copy; 2023 made by w311</p>
+</footer>
 </body>
-
 </html>
