@@ -3,41 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sportnews</title>
+  <title>Новости спорта</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-<header>
-  <h1>Sportnews</h1>
+<body class="body">
+<header class="header">
+  <img src="logo.png"  alt="error">
+  <h1 class="heading">Sportnews</h1>
   <p><em>always in game</em></p>
-  <a href="#">Instagram</a>
-  <a href="#">Twitter</a>
-  <a href="#">Facebook</a>
-  <a href="#">VK</a>
-  <a href="#">  +7 (228) 322 13 37</a>
-  <nav>
-    <ul>
-      <li><a href="#">Главная</a></li>
-      <li><a href="#">О нас</a></li>
-      <li><a href="#">Контакты</a></li>
-      <li><a href="#">Поиск</a></li>
+  <div class="social_links">
+    <a class="social_item" href="#">Instagram</a>
+    <a class="social_item" href="#">Twitter</a>
+    <a class="social_item" href="#">Facebook</a>
+    <a class="social_item" href="#">VK</a>
+    <a class="social_item" href="#">  +7 (228) 322 13 37</a>
+  </div>
+  <nav class = "navigation">
+    <ul class="navigation_list">
+      <li><a class="navigation_item" href="#">Главная</a></li>
+      <li><a class="navigation_item" href="#">О нас</a></li>
+      <li><a class="navigation_item" href="#">Контакты</a></li>
+      <li><a class="navigation_item" href="#">Поиск</a></li>
     </ul>
   </nav>
 </header>
 
-<main>
-  <section>
-    <h2> Основные новости </h2>
-    <p> Последние события </p>
+<main class="main">
+  <section class="news">
+    <h2>Основные новости</h2>
+    <p class="sports">Последние события</p>
+    <p class="sports">Футбол</p>
+    <p class="sports">Баскетбол</p>
+    <p class="sports">Хоккей</p>
+    <p class="sports">Воллейбол</p>
   </section>
-  <section>
+
+  <section class="cyber">
     <h2>Киберспорт</h2>
     <p> Новости о виртуальном спорте</p>
   </section>
-  <section>
+  <section class="schedule">
     <h2>Расписание матчей</h2>
+    <section class="schedule">
+    <img src="schedule.png"  alt="error">
+    </section>
     <p>Дополнительная информация.</p>
   </section>
-  <aside>
+  <aside class="ASCII">
     <h4> ASCII-рисуночек: </h4>
     <pre>
   ⚽
@@ -51,29 +63,29 @@
    |__|__|
     </pre>
   </aside>
-  <article>
+  <article class="code_snipp">
     <h2>Сниппет кода:</h2>
     <p><dfn>не знаю для чего, по заданию нужно было</dfn></p>
-  <code>
+  <code class="code">
     function greet() {
     console.log("Спорт - сила!");
     }
   </code>
   </article>
-  <section>
+  <section class="quote">
     <h2>Цитата:</h2>
-  <blockquote>
+  <blockquote class="blockquote">
     <q><em>Одна ошибка и ты ОШИБСЯ</em></q>
     <cite>-Криштиану Роналду</cite>
   </blockquote>
   </section>
-  <section>
+  <section class="formula">
     <h2> Формула: </h2>
   </section>
   <p>Скорость света в вакууме: <sup>c</sup> = <em>299,792,458</em> м/с<sup>2</sup></p>
 </main>
 
-<footer>
+<footer class="footer">
   <p>&copy; 2023 made by w311</p>
 </footer>
 </body>
