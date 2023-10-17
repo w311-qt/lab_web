@@ -1,6 +1,7 @@
 .body {
   background-color: #80ffcc;
   font-family: Arial, sans-serif;
+  font-color: #80ffcc;
   margin: 0;
   padding: 5px;
   text-align: left;
@@ -11,7 +12,7 @@
   color: #001a0f;
   text-align: left;
 }
-.homepage__main__navigation__list__item__element {
+.homepage_navigation_list_item {
     font-family: 'Nunito Sans', sans-serif;
     color: var(--font-color);
     font-size: 1.35rem;
@@ -19,7 +20,7 @@
     text-decoration: none;
 }
 
-.homepage__main__navigation__list__item__element:hover {
+.homepage_navigation_list_item {
     text-decoration: underline;
 }
 
@@ -55,7 +56,6 @@
 
 .news {
   background-color: #00b3b3;
-  font-family: Gill Sans, sans-serif;
   font-size: 1rem;
   margin-bottom: 20px;
   line-height: 1.5;
@@ -65,7 +65,7 @@
  background-color: #80ffcc;
  font-size: 1.4rem;
  font-style: italic;
-  font-weight: 500;
+ font-weight: 500;
 }
 
 .code {
@@ -92,12 +92,14 @@
   padding: 10px;
   margin: 20px 0;
   text-indent: 35rem;
+  text-transform: uppercase;
 }
 
 .footer {
   text-align: left;
   background-color: #333;
   color: #fff;
+  text-transform: lowercase;
 }
 
 img {
