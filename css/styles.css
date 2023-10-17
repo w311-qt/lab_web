@@ -11,6 +11,17 @@
   color: #001a0f;
   text-align: left;
 }
+.homepage__main__navigation__list__item__element {
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--font-color);
+    font-size: 1.35rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.homepage__main__navigation__list__item__element:hover {
+    text-decoration: underline;
+}
 
 .heading {
   font-size: 1.875rem;
