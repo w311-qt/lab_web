@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <script src="./script/load_time.js"></script>
+  <script src="./script/mouse.js"></script>
   <meta charset="UTF-8">
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +15,7 @@
   <h1 class="heading_name">Sportnews</h1>
   <p><em>always in game</em></p>
   <div class="social_links">
-    <a class="social_item" href="#">Instagram</a>
+    <a class="social_item" href="#">Insta</a>
     <a class="social_item" href="#">Twitter</a>
     <a class="social_item" href="#">Facebook</a>
     <a class="social_item" href="#">VK</a>
@@ -21,8 +23,8 @@
   </div>
   <nav class="navigation">
     <ul class="homepage_navigation">
-      <li class="homepage_navigation_list"><a class="homepage_navigation_list_item" href="">Главная</a></li>
-      <li class="homepage_navigation_list"><a class="homepage_navigation_list_item" href="#">Контакты</a></li>
+      <li class="homepage_navigation_list"><a class="homepage_navigation_list_item" href="index.html">Главная</a></li>
+      <li class="homepage_navigation_list"><a class="homepage_navigation_list_item" href="contacts.html">Контакты</a></li>
       <li class="homepage_navigation_list"><a class="homepage_navigation_list_item" href="#">Поиск</a></li>
       <li class="homepage_navigation_list"><a class="homepage_navigation_list_item" href="#">О нас</a></li>
     </ul>
@@ -32,28 +34,28 @@
 <main class="main">
   <section class="news">
     <h2>Основные новости</h2>
-    <p class="sports">Последние события</p>
-    <p class="sports">Футбол</p>
-    <p class="sports">Баскетбол</p>
-    <p class="sports">Хоккей</p>
-    <p class="sports">Воллейбол</p>
+    <a class="sports">Последние события</a>
+    <a class="sports football" href="football.html">Футбол</a>
+    <a class="sports">Баскетбол</a>
+    <a class="sports">Хоккей</a>
+    <a class="sports">Воллейбол</a>
   </section>
 
   <section class="cyber">
     <h2>Киберспорт</h2>
-    <p> Новости о виртуальном спорте</p>
+    <a class="cyber_item" href="cyber.html"> Новости о виртуальном спорте</a>
   </section>
   <section class="schedule">
     <h2>Расписание матчей</h2>
     <section class="schedule">
-    <img src="schedule.png"  alt="error">
+      <img src="schedule.png"  alt="error">
     </section>
     <p>Дополнительная информация.</p>
   </section>
   <aside class="ASCII">
     <h4> ASCII-рисуночек: </h4>
     <pre>
-  ⚽
+  ⚽️
      / \
     /   \
    /_____\
@@ -61,33 +63,119 @@
    |  |  |
    |  |  |
    |  |  |
-   |__|__|
+   |||
     </pre>
   </aside>
   <article class="code_snipp">
     <h2>Сниппет кода:</h2>
     <p><dfn>не знаю для чего, по заданию нужно было</dfn></p>
-  <code class="code">
-    function greet() {
-    console.log("Спорт - сила!");
-    }
-  </code>
+    <code class="code">
+      function greet() {
+      console.log("Спорт - сила!");
+      }
+    </code>
   </article>
   <section class="quote">
     <h2>Цитата:</h2>
-  <blockquote class="blockquote">
-    <q><em>Одна ошибка и ты ОШИБСЯ</em></q>
-    <cite>--Криштиану Роналду</cite>
-  </blockquote>
+    <blockquote class="blockquote">
+      <q><em>Одна ошибка и ты ОШИБСЯ</em></q>
+      <cite>--Криштиану Роналду</cite>
+    </blockquote>
   </section>
   <section class="formula">
     <h2> Формула: </h2>
+    <p>Скорость света в вакууме: <sup>c</sup> = <em>299,792,458</em> м/с<sup>2</sup></p>
   </section>
-  <p>Скорость света в вакууме: <sup>c</sup> = <em>299,792,458</em> м/с<sup>2</sup></p>
+  <section class="gallery">
+    <h2>Галерея:</h2>
+    <img class="gallery_item" src="img/messi.jpg" alt="404">
+    <img class="gallery_item" src="img/ronaldo.jpg" alt="404">
+    <img class="gallery_item" src="img/images.jpg" alt="404">
+  </section>
+  <section>
+    <h2 class="examples__title">Турнирная таблица Английской Премьер Лиги</h2>
+    <div class="table_apl">
+      <div class="table grid-item">
+        <div class="table_header">Команда</div>
+        <div class="table_item">Ливерпуль</div>
+        <div class="table_item">Тоттенхем</div>
+        <div class="table_item">Манчестер Сити</div>
+        <div class="table_item">Арсенал</div>
+        <div class="table_item">Астон Вилла</div>
+        <div class="table_item">Ньюкасл Юнайтед</div>
+        <div class="table_item">Фулхэм</div>
+        <div class="table_item">Челси</div>
+        <div class="table_item">Манчестер Юнайтед</div>
+        <div class="table_item">Брайтон</div>
+        <div class="table_item">Лутон Таун</div>
+
+      </div>
+      <div class="table grid-item">
+        <div class="table_header">Игры</div>
+        <div class="table_item"><p class="component-name">10</p></div>
+        <div class="table_item"><p class="component-name">10</p></div>
+        <div class="table_item"><p class="component-name">10</p></div>
+        <div class="table_item"><p class="component-name">10</p></div>
+        <div class="table_item"><p class="component-name">10</p></div>
+        <div class="table_item"><p class="component-name">10</p></div>
+        <div class="table_item"><p class="component-name">10</p></div>
+        <div class="table_item"><p class="component-name">10</p></div>
+        <div class="table_item"><p class="component-name">10</p></div>
+        <div class="table_item"><p class="component-name">10</p></div>
+        <div class="table_item"><p class="component-name">10</p></div>
+        <div class="table_item"><p class="component-name">10</p></div>
+        <div class="table_item"><p class="component-name">10</p></div>
+        <div class="table_item"><p class="component-name">10</p></div>
+      </div>
+      <div class="table grid-item">
+        <div class="table_header">Очки</div>
+        <div class="table_item"><p class="component-name">26</p></div>
+        <div class="table_item"><p class="component-name">24</p></div>
+        <div class="table_item"><p class="component-name">24</p></div>
+        <div class="table_item"><p class="component-name">23</p></div>
+        <div class="table_item"><p class="component-name">22</p></div>
+        <div class="table_item"><p class="component-name">17</p></div>
+        <div class="table_item"><p class="component-name">17</p></div>
+        <div class="table_item"><p class="component-name">15</p></div>
+        <div class="table_item"><p class="component-name">14</p></div>
+        <div class="table_item"><p class="component-name">13</p></div>
+        <div class="table_item"><p class="component-name">11</p></div>
+        <div class="table_item"><p class="component-name">10</p></div>
+        <div class="table_item"><p class="component-name">8</p></div>
+        <div class="table_item"><p class="component-name">8</p></div>
+      </div>
+      <div class="table grid-item">
+        <div class="table_header">Забито голов</div>
+        <div class="table_item"><p class="component-name">13</p></div>
+        <div class="table_item "><p class="component-name">15</p></div>
+        <div class="table_item"><p class="component-name">16</p></div>
+        <div class="table_item"><p class="component-name">12</p></div>
+        <div class="table_item"><p class="component-name">11</p></div>
+        <div class="table_item"><p class="component-name">10</p></div>
+        <div class="table_item"><p class="component-name">13</p></div>
+        <div class="table_item"><p class="component-name">16</p></div>
+        <div class="table_item"><p class="component-name">16</p></div>
+        <div class="table_item"><p class="component-name">13</p></div>
+        <div class="table_item"><p class="component-name">8</p></div>
+        <div class="table_item"><p class="component-name">7</p></div>
+        <div class="table_item"><p class="component-name">7</p></div>
+        <div class="table_item"><p class="component-name">8</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="section_load_time">
+    <h3 class="time_title">Страница загрузилась всего за:</h3>
+    <p class="time__duration"></p>
+  </section>
 </main>
 
 <footer class="footer">
   <p>&copy; 2023 made by w311</p>
+  <img class="social_img" src="img/insta.png" alt="404">
+  <img class="social_img" src="img/twitter.png" alt="404">
+  <img class="social_img" src="img/facebook.png" alt="404">
+  <img class="social_img" src="img/VK_Logo.png" alt="404">
+  <img class="social_img" src="img/phone.png" alt="404">
 </footer>
 </body>
 </html>
