@@ -1,5 +1,5 @@
-window.addEventListener("load", function () {
-
+(function() {
+  window.addEventListener("load", function() {
     const durationElement = document.querySelector(".time__duration");
 
     if (durationElement) {
@@ -7,4 +7,5 @@ window.addEventListener("load", function () {
         let loadEventStart = performance.getEntriesByType('navigation')[0].loadEventStart;
         durationElement.textContent = (loadEventStart - domainLookupEnd).toFixed(1) + " мс";
     }
-});
+  });
+})();

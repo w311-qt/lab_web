@@ -260,3 +260,11 @@ img {
   background-color: yellow;
   font-weight: bold;
 }
+
+@media screen and (max-width: 980px) {
+  .cyber,
+  .news {
+  justify-content: center;
+  display: flex;
+  }
+}
