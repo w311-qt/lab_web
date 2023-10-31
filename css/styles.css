@@ -159,18 +159,21 @@ img {
 
 .table_apl {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 0.3125rem;
     margin: auto;
 }
 
-.grid-item {
+.grid-item,
+.grid-item_scored {
     display: grid;
     grid-template-rows: repeat(10, 1fr);
     gap: 0.3125rem;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3)
 }
 
-.table_header{
+.table_header,
+.table_header_scored {
     font-size: 1.2rem;
     font-weight: 500;
     text-align: left;
@@ -179,25 +182,23 @@ img {
     background-color: #f8f5f5;
 }
 
-.table_item{
+.table_item,
+.table_item_scored {
     font-size: 1rem;
     font-weight: 500;
     text-align: left;
     padding: 0.5rem 1rem;
     border-radius: 0.3125rem;
-    transition: background-color 0.3s ease;
 }
 
-.table_item:nth-child(odd){
+.table_item:nth-child(odd),
+.table_item_scored:nth-child(odd) {
     background-color: #f2f2f2;
 }
 
-.table_item:nth-child(even){
+.table_item:nth-child(even),
+.table_item_scored:nth-child(even) {
     background-color: #fdfdfd;
-}
-
-.table_item:hover {
-    background-color: #d7d7d7;
 }
 
 .news-image{
@@ -242,4 +243,20 @@ img {
 .sports.highlighted {
   background-color: #5F9EA0;
   font-size: 1.45rem;
+}
+
+@media screen and (max-width: 980px) {
+  .code_snipp,
+  .formula,
+  .ASCII,
+  .table_item_scored,
+  .table_header_scored  {
+  display: none
+  }
+}
+
+.homepage_navigation_list_item.active,
+.homepage_navigation_list.active {
+  background-color: yellow;
+  font-weight: bold;
 }
