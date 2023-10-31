@@ -2,7 +2,6 @@
 <html lang="ru">
 <head>
   <script src="./script/load_time.js"></script>
-  <script src="./script/mouse.js"></script>
   <script src="./script/active.js"></script>
   <meta charset="UTF-8">
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
@@ -87,83 +86,189 @@
     <h2> Формула: </h2>
     <p>Скорость света в вакууме: <sup>c</sup> = <em>299,792,458</em> м/с<sup>2</sup></p>
   </section>
+  <h2>Галерея:</h2>
   <section class="gallery">
-    <h2>Галерея:</h2>
     <img class="gallery_item" src="img/messi.jpg" alt="404">
     <img class="gallery_item" src="img/ronaldo.jpg" alt="404">
     <img class="gallery_item" src="img/images.jpg" alt="404">
   </section>
-  <section>
-    <h2 class="examples__title">Турнирная таблица Английской Премьер Лиги</h2>
-    <div class="table_apl">
-      <div class="table grid-item">
-        <div class="table_header">Команда</div>
-        <div class="table_item">Ливерпуль</div>
-        <div class="table_item">Тоттенхем</div>
-        <div class="table_item">Манчестер Сити</div>
-        <div class="table_item">Арсенал</div>
-        <div class="table_item">Астон Вилла</div>
-        <div class="table_item">Ньюкасл Юнайтед</div>
-        <div class="table_item">Фулхэм</div>
-        <div class="table_item">Челси</div>
-        <div class="table_item">Манчестер Юнайтед</div>
-        <div class="table_item">Брайтон</div>
-        <div class="table_item">Лутон Таун</div>
-
-      </div>
-      <div class="table grid-item">
-        <div class="table_header">Игры</div>
-        <div class="table_item"><p class="component-name">10</p></div>
-        <div class="table_item"><p class="component-name">10</p></div>
-        <div class="table_item"><p class="component-name">10</p></div>
-        <div class="table_item"><p class="component-name">10</p></div>
-        <div class="table_item"><p class="component-name">10</p></div>
-        <div class="table_item"><p class="component-name">10</p></div>
-        <div class="table_item"><p class="component-name">10</p></div>
-        <div class="table_item"><p class="component-name">10</p></div>
-        <div class="table_item"><p class="component-name">10</p></div>
-        <div class="table_item"><p class="component-name">10</p></div>
-        <div class="table_item"><p class="component-name">10</p></div>
-        <div class="table_item"><p class="component-name">10</p></div>
-        <div class="table_item"><p class="component-name">10</p></div>
-        <div class="table_item"><p class="component-name">10</p></div>
-      </div>
-      <div class="table grid-item">
-        <div class="table_header">Очки</div>
-        <div class="table_item"><p class="component-name">26</p></div>
-        <div class="table_item"><p class="component-name">24</p></div>
-        <div class="table_item"><p class="component-name">24</p></div>
-        <div class="table_item"><p class="component-name">23</p></div>
-        <div class="table_item"><p class="component-name">22</p></div>
-        <div class="table_item"><p class="component-name">17</p></div>
-        <div class="table_item"><p class="component-name">17</p></div>
-        <div class="table_item"><p class="component-name">15</p></div>
-        <div class="table_item"><p class="component-name">14</p></div>
-        <div class="table_item"><p class="component-name">13</p></div>
-        <div class="table_item"><p class="component-name">11</p></div>
-        <div class="table_item"><p class="component-name">10</p></div>
-        <div class="table_item"><p class="component-name">8</p></div>
-        <div class="table_item"><p class="component-name">8</p></div>
-      </div>
-      <div class="table grid-item_scored">
-        <div class="table_header_scored">Забито голов</div>
-        <div class="table_item_scored"><p class="component-name">13</p></div>
-        <div class="table_item_scored "><p class="component-name">15</p></div>
-        <div class="table_item_scored"><p class="component-name">16</p></div>
-        <div class="table_item_scored"><p class="component-name">12</p></div>
-        <div class="table_item_scored"><p class="component-name">11</p></div>
-        <div class="table_item_scored"><p class="component-name">10</p></div>
-        <div class="table_item_scored"><p class="component-name">13</p></div>
-        <div class="table_item_scored"><p class="component-name">16</p></div>
-        <div class="table_item_scored"><p class="component-name">16</p></div>
-        <div class="table_item_scored"><p class="component-name">13</p></div>
-        <div class="table_item_scored"><p class="component-name">8</p></div>
-        <div class="table_item_scored"><p class="component-name">7</p></div>
-        <div class="table_item_scored"><p class="component-name">7</p></div>
-        <div class="table_item_scored"><p class="component-name">8</p></div>
-      </div>
-    </div>
-  </section>
+  <table class="table">
+    <thead class="thead">
+    <tr class="tr">
+      <th class="th">Команда</th>
+      <th class="th">Очки</th>
+      <th class="th">Игры</th>
+      <th class="th">Забито голов</th>
+      <th class="th">Пропущено голов</th>
+      <th class="th">Разница мячей</th>
+      <th class="th">Текущая форма</th>
+    </tr>
+    </thead>
+    <tbody class="tbody">
+    <tr class="tr">
+      <td class="td">Ливерпуль</td>
+      <td class="td">24</td>
+      <td class="td">10</td>
+      <td class="td">16</td>
+      <td class="td">8</td>
+      <td class="td">+8</td>
+      <td class="td">ВВВНВ</td>
+    </tr>
+    <tr class="tr">
+      <td class="td">Тоттенхем</td>
+      <td class="td">24</td>
+      <td class="td">10</td>
+      <td class="td">15</td>
+      <td class="td">9</td>
+      <td class="td">+6</td>
+      <td class="td">ВВПВН</td>
+    </tr>
+    <tr class="tr">
+      <td class="td">Тоттенхем</td>
+      <td class="td">24</td>
+      <td class="td">10</td>
+      <td class="td">15</td>
+      <td class="td">9</td>
+      <td class="td">+6</td>
+      <td class="td">ВВПВН</td>
+    </tr>
+    <tr class="tr">
+      <td class="td">Тоттенхем</td>
+      <td class="td">24</td>
+      <td class="td">10</td>
+      <td class="td">15</td>
+      <td class="td">9</td>
+      <td class="td">+6</td>
+      <td class="td">ВВПВН</td>
+    </tr>
+    <tr class="tr">
+      <td class="td">Тоттенхем</td>
+      <td class="td">24</td>
+      <td class="td">10</td>
+      <td class="td">15</td>
+      <td class="td">9</td>
+      <td class="td">+6</td>
+      <td class="td">ВВПВН</td>
+    </tr>
+    <tr class="tr">
+      <td class="td">Тоттенхем</td>
+      <td class="td">24</td>
+      <td class="td">10</td>
+      <td class="td">15</td>
+      <td class="td">9</td>
+      <td class="td">+6</td>
+      <td class="td">ВВПВН</td>
+    </tr>
+    <tr class="tr">
+      <td class="td">Тоттенхем</td>
+      <td class="td">24</td>
+      <td class="td">10</td>
+      <td class="td">15</td>
+      <td class="td">9</td>
+      <td class="td">+6</td>
+      <td class="td">ВВПВН</td>
+    </tr>
+    <tr class="tr">
+      <td class="td">Тоттенхем</td>
+      <td class="td">24</td>
+      <td class="td">10</td>
+      <td class="td">15</td>
+      <td class="td">9</td>
+      <td class="td">+6</td>
+      <td class="td">ВВПВН</td>
+    </tr>
+    <tr class="tr">
+      <td class="td">Тоттенхем</td>
+      <td class="td">24</td>
+      <td class="td">10</td>
+      <td class="td">15</td>
+      <td class="td">9</td>
+      <td class="td">+6</td>
+      <td class="td">ВВПВН</td>
+    </tr>
+    <tr class="tr">
+      <td class="td">Тоттенхем</td>
+      <td class="td">24</td>
+      <td class="td">10</td>
+      <td class="td">15</td>
+      <td class="td">9</td>
+      <td class="td">+6</td>
+      <td class="td">ВВПВН</td>
+    </tr>
+    <tr class="tr">
+      <td class="td">Тоттенхем</td>
+      <td class="td">24</td>
+      <td class="td">10</td>
+      <td class="td">15</td>
+      <td class="td">9</td>
+      <td class="td">+6</td>
+      <td class="td">ВВПВН</td>
+    </tr>
+    <tr class="tr">
+      <td class="td">Тоттенхем</td>
+      <td class="td">24</td>
+      <td class="td">10</td>
+      <td class="td">15</td>
+      <td class="td">9</td>
+      <td class="td">+6</td>
+      <td class="td">ВВПВН</td>
+    </tr>
+    <tr class="tr">
+      <td class="td">Тоттенхем</td>
+      <td class="td">24</td>
+      <td class="td">10</td>
+      <td class="td">15</td>
+      <td class="td">9</td>
+      <td class="td">+6</td>
+      <td class="td">ВВПВН</td>
+    </tr>
+    <tr class="tr">
+      <td class="td">Тоттенхем</td>
+      <td class="td">24</td>
+      <td class="td">10</td>
+      <td class="td">15</td>
+      <td class="td">9</td>
+      <td class="td">+6</td>
+      <td class="td">ВВПВН</td>
+    </tr>
+    <tr class="tr">
+      <td class="td">Тоттенхем</td>
+      <td class="td">24</td>
+      <td class="td">10</td>
+      <td class="td">15</td>
+      <td class="td">9</td>
+      <td class="td">+6</td>
+      <td class="td">ВВПВН</td>
+    </tr>
+    <tr class="tr">
+      <td class="td">Тоттенхем</td>
+      <td class="td">24</td>
+      <td class="td">10</td>
+      <td class="td">15</td>
+      <td class="td">9</td>
+      <td class="td">+6</td>
+      <td class="td">ВВПВН</td>
+    </tr>
+    <tr class="tr">
+      <td class="td">Тоттенхем</td>
+      <td class="td">24</td>
+      <td class="td">10</td>
+      <td class="td">15</td>
+      <td class="td">9</td>
+      <td class="td">+6</td>
+      <td class="td">ВВПВН</td>
+    </tr>
+    <tr class="tr">
+      <td class="td">Тоттенхем</td>
+      <td class="td">24</td>
+      <td class="td">10</td>
+      <td class="td">15</td>
+      <td class="td">9</td>
+      <td class="td">+6</td>
+      <td class="td">ВВПВН</td>
+    </tr>
+    </tbody>
+  </table>
   <section class="section_load_time">
     <h3 class="time_title">Страница загрузилась всего за:</h3>
     <p class="time__duration"></p>
