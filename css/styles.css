@@ -310,15 +310,123 @@ img {
   border-radius: 5px;
 }
 
-.homepage_navigation_list_item:hover,
-.sports:hover {
-  background-color: gray;
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-.highlighted {
-  background-color: gray !important;
+#ratingForm {
+  margin-bottom: 20px;
 }
 
-.homepage_navigation_list_item:hover {
-  background-color: yellow;
+.vote_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
+
+.vote_form input,
+.vote_form select {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.vote_form .button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+.main_todo {
+  text-align: center;
+  border: 3px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 40px;
+  background-color: tomato;
+}
+
+.vote_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.vote_input {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+/* Стили для задач в списке */
+.list_items {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #eee;
+  margin-bottom: 5px;
+}
+
+.checked {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.homepage_navigation_list:hover {  background-color: blue;
+}
+ a {  font-size: 2.5vh;
+  line-height: 4.8vh;}
+
+.homepage_navigation_list:hover {
+  background-color: green;
+}
+
+.table-container {
+  overflow-y: scroll; /* Включает вертикальную полосу прокрутки */
+  max-height: 400px; /* Устанавливает максимальную высоту контейнера для активации полосы прокрутки */
+}
+
+.table-scroll {
+  overflow-x: scroll; /* Включает горизонтальную полосу прокрутки при необходимости */
+  max-width: 1000px;
+}
+
+.homepage_navigation_list li.active {
+  background-color: green;  color: green;
+}
+
