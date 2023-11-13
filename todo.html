@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <script src="./script/load_time.js"></script>
+  <script src="./script/active.js"></script>
+  <script defer src="./script/football_script.js"></script>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Новости спорта</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="body">
+<header class="header">
+  <img class="homepage_logo" src="logo.png"  alt="error">
+  <h1 class="heading_name">Sportnews</h1>
+  <p><em>always in game</em></p>
+  <div class="social_links">
+    <a class="social_item" href="#">Insta</a>
+    <a class="social_item" href="#">Twitter</a>
+    <a class="social_item" href="#">Facebook</a>
+    <a class="social_item" href="#">VK</a>
+    <a class="social_item" href="#">  +7 (228) 322 13 37</a>
+  </div>
+  <nav class="navigation">
+    <ul class="homepage_navigation">
+      <li class="homepage_navigation_list"><a class="homepage_navigation_list_item" href="index.html">Главная</a></li>
+      <li class="homepage_navigation_list"><a class="homepage_navigation_list_item" href="contacts.html">Контакты</a></li>
+      <li class="homepage_navigation_list active"><a class="homepage_navigation_list_item" href="todo.html">Голосование</a></li>
+      <li class="homepage_navigation_list"><a class="homepage_navigation_list_item" href="#">Поиск</a></li>
+      <li class="homepage_navigation_list"><a class="homepage_navigation_list_item" href="#">О нас</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="main_todo">
+  <h1>Голосование за команду/игрока недели</h1>
+  <div id="ratingForm">
+    <label for="ratingType">Выберите рейтинг</label>
+    <select id="ratingType" name="ratingType">
+      <option value="team">Команды</option>
+      <option value="player">Игроки</option>
+    </select>
+    <div>
+      <form class="vote_form">
+        <input class="vote_input" type="text" placeholder="Ваш вариант:">
+        <button class="button" type="submit">Добавить</button>
+      <ul class="list_items"></ul>
+      <div class="output_list">
+        <button class="button" type="submit">Отправить ответ</button>
+      </div>
+      </form>
+    </div>
+  </div>
+  <div id="ratingResults" class="results-container"></div>
+</main>
+  <section class="section_load_time">
+    <h3 class="time_title">Страница загрузилась всего за:</h3>
+    <p class="time__duration"></p>
+  </section>
+<footer class="footer">
+  <p>&copy; 2023 made by w311</p>
+  <img class="social_img" src="img/insta.png" alt="404">
+  <img class="social_img" src="img/twitter.png" alt="404">
+  <img class="social_img" src="img/facebook.png" alt="404">
+  <img class="social_img" src="img/VK_Logo.png" alt="404">
+  <img class="social_img" src="img/phone.png" alt="404">
+</footer>
+<script defer src="./script/football_script.js"></script>
+</body>
+</html>
