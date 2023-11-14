@@ -117,8 +117,6 @@ function deleteTodoAndSave(todo) {
   saveToLocalStorageAndRender();
 }
 
-getFromLocalStorage();
-
 todoItemsList.addEventListener('click', function (event) {
   if (event.target.type === 'checkbox') {
     const todo = todos.find(item => item.name === event.target.nextElementSibling.textContent);
