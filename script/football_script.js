@@ -47,7 +47,6 @@ function handleFormSubmit(event) {
   if (newTodoName !== '') {
     const newTodo = {
       name: newTodoName,
-      completed: false
     };
     addTodoAndSave(newTodo);
     todoInput.value = '';
