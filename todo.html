@@ -2,7 +2,6 @@
 <html lang="ru">
 <head>
   <script src="./script/load_time.js"></script>
-  <script defer src="./script/football_script.js"></script>
   <meta charset="UTF-8">
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,22 +32,23 @@
 </header>
 <main class="main_todo">
   <h1>Голосование за команду/игрока недели</h1>
-  <div id="ratingForm">
-    <label for="ratingType">Выберите рейтинг</label>
-    <select id="ratingType" name="ratingType">
-      <option value="team">Команды</option>
-      <option value="player">Игроки</option>
-    </select>
-    <div>
-      <form class="vote_form">
-        <input class="vote_input" type="text" placeholder="Ваш вариант:">
-        <button class="button" type="submit">Добавить</button>
+  <div>
+    <form class="vote_form">
+      <input
+        class="vote_input"
+        type="text"
+        placeholder="Ваш вариант:"
+        autocomplete="off"
+      oninput="showTemplates()"
+      required
+      >
+      <div id="templatesDropdown" class="templates-dropdown"></div>
+      <button class="button" type="submit">Добавить</button>
       <ul class="list_items"></ul>
       <div class="output_list">
         <button class="button" type="submit">Отправить ответ</button>
       </div>
-      </form>
-    </div>
+    </form>
   </div>
   <div id="ratingResults" class="results-container"></div>
 </main>

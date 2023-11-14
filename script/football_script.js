@@ -1,16 +1,51 @@
 const todoForm = document.querySelector('.vote_form');
 const todoInput = document.querySelector('.vote_input');
+const templatesDropdown = document.getElementById('templatesDropdown');
 const todoItemsList = document.querySelector('.list_items');
 let todos = [];
 
 todoForm.addEventListener('submit', handleFormSubmit);
+
+function showTemplates() {
+  const input = document.querySelector('.vote_input');
+  const templatesDropdown = document.getElementById('templatesDropdown');
+
+  templatesDropdown.innerHTML = '';
+
+  if (input.value.trim() !== '') {
+    const enteredText = input.value.toLowerCase();
+
+    const teamTemplates = ['Ливерпуль', 'Тоттенхем', 'Арсенал', 'Манчестер Сити', 'Челси', 'Манчестер Юнайтед'];
+    const matchingTemplates = teamTemplates.filter(template =>
+      template.toLowerCase().includes(enteredText)
+    );
+
+    matchingTemplates.forEach(template => {
+      const templateElement = document.createElement('div');
+      templateElement.textContent = template;
+      templateElement.classList.add('template-item');
+      templateElement.addEventListener('click', () => {
+        input.value = template;
+        templatesDropdown.innerHTML = '';
+      });
+      templatesDropdown.appendChild(templateElement);
+    });
+
+    if (matchingTemplates.length > 0) {
+      templatesDropdown.style.display = 'block';
+    } else {
+      templatesDropdown.style.display = 'none';
+    }
+  } else {
+    templatesDropdown.style.display = 'none'; // Скрываем выпадающий список, если поле ввода пустое
+  }
+}
 
 function handleFormSubmit(event) {
   event.preventDefault();
   const newTodoName = todoInput.value.trim();
   if (newTodoName !== '') {
     const newTodo = {
-      id: Date.now(),
       name: newTodoName,
       completed: false
     };
@@ -37,7 +72,6 @@ function renderSingleTodo(todo) {
 function createTodoElement(todo) {
   const li = document.createElement('li');
   li.setAttribute('class', 'item');
-  li.setAttribute('data-key', todo.id);
   if (todo.completed) {
     li.classList.add('checked');
   }
@@ -45,11 +79,11 @@ function createTodoElement(todo) {
   checkbox.setAttribute('type', 'checkbox');
   checkbox.classList.add('checkbox');
   checkbox.checked = todo.completed;
-  checkbox.addEventListener('change', () => toggleAndSave(todo.id));
+  checkbox.addEventListener('change', () => toggleAndSave(todo));
   const deleteButton = document.createElement('button');
   deleteButton.textContent = 'X';
   deleteButton.classList.add('delete-button');
-  deleteButton.addEventListener('click', () => deleteTodoAndSave(todo.id));
+  deleteButton.addEventListener('click', () => deleteTodoAndSave(todo));
   li.appendChild(checkbox);
   li.appendChild(document.createTextNode(todo.name));
   li.appendChild(deleteButton);
@@ -73,17 +107,13 @@ function getFromLocalStorage() {
   }
 }
 
-function toggleAndSave(id) {
-  todos.forEach(todo => {
-    if (todo.id === id) {
-      todo.completed = !todo.completed;
-    }
-  });
+function toggleAndSave(todo) {
+  todo.completed = !todo.completed;
   saveToLocalStorage();
 }
 
-function deleteTodoAndSave(id) {
-  todos = todos.filter(todo => todo.id !== id);
+function deleteTodoAndSave(todo) {
+  todos = todos.filter(item => item !== todo);
   saveToLocalStorageAndRender();
 }
 
@@ -91,11 +121,12 @@ getFromLocalStorage();
 
 todoItemsList.addEventListener('click', function (event) {
   if (event.target.type === 'checkbox') {
-    const todoId = event.target.parentElement.getAttribute('data-key');
-    toggleAndSave(todoId);
+    const todo = todos.find(item => item.name === event.target.nextElementSibling.textContent);
+    toggleAndSave(todo);
   }
   if (event.target.classList.contains('delete-button')) {
-    const todoId = event.target.parentElement.getAttribute('data-key');
-    deleteTodoAndSave(todoId);
+    const todo = todos.find(item => item.name === event.target.previousElementSibling.textContent);
+    deleteTodoAndSave(todo);
   }
 });
+
