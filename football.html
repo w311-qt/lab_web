@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html lang="ru">
+<style>
+   @keyframes spin {
+     to { transform: rotate(360deg); }
+   }
+   #preloader {
+     border: 16px solid #f3f3f3;
+     border-top: 16px solid #3498db;
+     border-radius: 50%;
+     width: 120px;
+     height: 120px;
+     animation: spin 2s linear infinite;
+   }
+</style>
 <head>
   <script src="./script/load_time.js"></script>
+  <script src="./script/dataLoader.js"></script>
   <meta charset="UTF-8">
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,6 +60,19 @@
     «Это совершенно ужасно. Это возмутительный акт ненависти и глупости, отрицание ценностей футбола и спорта. Необходимо быстро найти виновных, чтобы они были строго наказаны», – приводит слова Удеа-Кастера RMC Sport.</p>
   <img class="news_content_image" src="img/Lyon-Marseille-a-quelle-heure-et-sur-quelle-chaine-voir-le-match-1619763.jpg" alt="404">
 </div>
+</section>
+<section class="comments-section">
+  <h2 class="comments-title">Комментарии</h2>
+  <ul id="comments-list" class="comments-list">
+    <div id="userList"></div>
+    <div id="preloader" style="border: 16px solid #f3f3f3;
+     border-top: 16px solid #3498db;
+     border-radius: 50%;
+     width: 120px;
+     height: 120px;
+     animation: spin 2s linear infinite;"></div>
+    <button id="refresh" class="button" style="display: none;">Обновить комментарии</button>
+  </ul>
 </section>
 <section class="section_load_time">
   <h3 class="time_title">Страница загрузилась всего за:</h3>
