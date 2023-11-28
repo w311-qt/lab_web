@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     preloader.style.animation = 'spin 2s linear infinite'; // Активация анимации
 
-    let url = 'https://jsonplaceholder.typicode.com/posts/1/comments';
     let firstCall = false; // Флаг для отслеживания первого и второго обращения
     const limit = 3; // Ограничение по количеству пользователей
 
@@ -20,24 +19,32 @@ async function updateRequest(firstCall, limit) {
     const preloader = document.getElementById('preloader');
     const errorPlaceholder = document.createElement('div');
 
-    let url = 'https://jsonplaceholder.typicode.com/posts/1/comments';
+    let url = 'https://jsonplaceholder.typicode.com/comments';
 
     if (firstCall) {
-        url += `?_limit=${limit}`; // 1-ый вызов с ограничением
+        const limit = 3; // Ограничение
+        const randomStart = Math.floor(Math.random() * limit);
+        url += `?_start=${randomStart}&_limit=${limit}`;
     } else {
-        url += `?_start=${limit}&_limit=${limit}`; // 2-ой вызов с сдвигом и ограничением
+        url += `?_start=${limit}&_limit=${limit}`;
     }
-
     try {
+        preloader.style.display = 'block'; // Показать прелоадер перед отправкой запроса
+
         const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('Unable to response');
+        }
         const userList = await response.json();
         console.log('Данные:', userList);
         renderUsers(userList);
-        document.getElementById('refresh').style.display = 'block'; // отобразить кнопку "Обновить запрос"
-        preloader.style.display = 'none'; // скрыть прелоадер
+        document.getElementById('refresh').style.display = 'block';
+        preloader.style.display = 'none'; // Скрыть прелоадер после получения данных
     } catch (error) {
-        errorPlaceholder.textContent = 'Упс... Что-то пошло не так';
-        document.body.appendChild(errorPlaceholder);
+        console.error('Ошибка запроса:', error);
+        preloader.style.display = 'none'; // Скрыть прелоадер в случае ошибки
+        errorPlaceholder.textContent = 'Произошла ошибка при выполнении запроса.';
+        document.getElementById('userList').appendChild(errorPlaceholder);
     }
 }
 
@@ -45,19 +52,14 @@ function renderUsers(userList) {
     const userListElement = document.getElementById('userList');
     userListElement.innerHTML = ''; // очистить существующие данные
 
+    const template = document.getElementById('userTemplate');
+
     userList.forEach(user => {
-        const userElement = document.createElement('div');
-        const emailElement = document.createElement('p');
-        const themeElement = document.createElement('p');
-        const commentElement = document.createElement('p');
+        const userElement = document.importNode(template.content, true);
 
-        emailElement.textContent = `Email: ${user.email}`;
-        themeElement.textContent = `Theme: ${user.name}`;
-        commentElement.textContent = `Comment: ${user.body}`;
-
-        userElement.appendChild(emailElement);
-        userElement.appendChild(themeElement);
-        userElement.appendChild(commentElement);
+        userElement.querySelector('.email').textContent = 'Email: ' + user.email;
+        userElement.querySelector('.theme').textContent = 'Theme: ' + user.name;
+        userElement.querySelector('.comment').textContent = 'Comment: ' + user.body;
 
         userListElement.appendChild(userElement);
     });
