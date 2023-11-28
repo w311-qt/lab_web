@@ -35,15 +35,15 @@
   <h1>Голосование за команду/игрока недели</h1>
   <div>
     <form class="vote_form">
-      <input
-        class="vote_input"
-        type="text"
-        placeholder="Ваш вариант:"
-        autocomplete="off"
-      oninput="showTemplates()"
-      required
-      >
-      <div id="templatesDropdown" class="templates-dropdown"></div>
+      <input class="vote_input" list="teamList">
+      <datalist id="teamList">
+        <option value="Ливерпуль">
+        <option value="Тоттенхем">
+        <option value="Арсенал">
+        <option value="Манчестер Сити">
+        <option value="Челси">
+        <option value="Манчестер Юнайтед">
+      </datalist>
       <button class="button" type="submit">Добавить</button>
       <ul class="list_items"></ul>
       <div class="output_list">

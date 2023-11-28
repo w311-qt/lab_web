@@ -8,9 +8,7 @@ todoForm.addEventListener('submit', handleFormSubmit);
 
 function showTemplates() {
   const input = document.querySelector('.vote_input');
-  const templatesDropdown = document.getElementById('templatesDropdown');
-
-  templatesDropdown.innerHTML = '';
+  const addButton = document.querySelector('.add_button');
 
   if (input.value.trim() !== '') {
     const enteredText = input.value.toLowerCase();
@@ -20,26 +18,57 @@ function showTemplates() {
       template.toLowerCase().includes(enteredText)
     );
 
+    const datalist = document.getElementById('teamList');
+    datalist.innerHTML = '';
+
     matchingTemplates.forEach(template => {
-      const templateElement = document.createElement('div');
-      templateElement.textContent = template;
-      templateElement.classList.add('template-item');
-      templateElement.addEventListener('click', () => {
-        input.value = template;
-        templatesDropdown.innerHTML = '';
-      });
-      templatesDropdown.appendChild(templateElement);
+      const option = document.createElement('option');
+      option.value = template;
+      datalist.appendChild(option);
     });
 
     if (matchingTemplates.length > 0) {
-      templatesDropdown.style.display = 'block';
+      datalist.style.display = 'block';
     } else {
-      templatesDropdown.style.display = 'none';
+      datalist.style.display = 'none';
     }
+
+    addButton.disabled = true;
   } else {
-    templatesDropdown.style.display = 'none'; // Скрываем выпадающий список, если поле ввода пустое
+    const datalist = document.getElementById('teamList');
+    datalist.innerHTML = '';
+    datalist.style.display = 'none';
+
+    addButton.disabled = false;
   }
 }
+
+function addTemplate() {
+  const input = document.querySelector('.vote_input');
+  const selectedOption = document.querySelector('#teamList option[value="' + input.value + '"]');
+
+  if (input.value.trim() !== '' && selectedOption) {
+    const selectedTemplate = selectedOption.value;
+
+    // Добавьте ваш код для обработки выбранного шаблона
+    console.log('Выбранный шаблон:', selectedTemplate);
+
+    // Очистите поле ввода
+    input.value = '';
+
+    // Скрыть список команд
+    const datalist = document.getElementById('teamList');
+    datalist.innerHTML = '';
+    datalist.style.display = 'none';
+  }
+}
+
+// Обработчики событий
+const input = document.querySelector('.vote_input');
+const addButton = document.querySelector('.add_button');
+
+input.addEventListener('input', showTemplates);
+addButton.addEventListener('click', addTemplate);
 
 function handleFormSubmit(event) {
   event.preventDefault();
