@@ -1,28 +1,3 @@
-async function updateRequest(firstCall) {
-    const preloader = document.getElementById('preloader');
-    const errorPlaceholder = document.createElement('div');
-
-    let url = 'https://jsonplaceholder.typicode.com/posts/1/comments';
-
-    if (firstCall) {
-        url += '?id_gte=3'; // 1-ый вызов >= 3
-    } else {
-        url += '?id_lte=3'; // 2-ой вызов >= 3
-    }
-
-    try {
-        const response = await fetch(url);
-        const userList = await response.json();
-        preloader.style.display = 'none'; // скрыть прелоадер
-        console.log('Данные:', userList);
-        renderUsers(userList);
-        document.getElementById('refresh').style.display = 'block'; // отобразить кнопку "Обновить запрос"
-    } catch (error) {
-        errorPlaceholder.textContent = 'Упс... Что-то пошло не так';
-        document.body.appendChild(errorPlaceholder);
-    }
-}
-
 document.addEventListener('DOMContentLoaded', async function() {
     const preloader = document.getElementById('preloader');
 
