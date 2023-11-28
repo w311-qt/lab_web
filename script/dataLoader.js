@@ -31,10 +31,10 @@ async function updateRequest(firstCall, limit) {
     try {
         const response = await fetch(url);
         const userList = await response.json();
-        preloader.style.display = 'none'; // скрыть прелоадер
         console.log('Данные:', userList);
         renderUsers(userList);
         document.getElementById('refresh').style.display = 'block'; // отобразить кнопку "Обновить запрос"
+        preloader.style.display = 'none'; // скрыть прелоадер
     } catch (error) {
         errorPlaceholder.textContent = 'Упс... Что-то пошло не так';
         document.body.appendChild(errorPlaceholder);

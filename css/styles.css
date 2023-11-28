@@ -454,3 +454,8 @@ display: inline-block;
     background-color: #ddd;
     color: black;
 }
+
+.comments-title {
+  text-decoration: underline;
+  text-align: center;
+}
