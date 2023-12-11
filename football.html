@@ -12,10 +12,40 @@
      height: 120px;
      animation: spin 2s linear infinite;
    }
+   .embla,
+   .embla2{
+     overflow: hidden;
+   }
+   .embla__container {
+     display: flex;
+   }
+   .embla__slide {
+     flex: 0 0 100%;
+     min-width: 0;
+   }
+
+   .news-item-fut {
+     background-color: #fff; /* цвет фона блока новости */
+     border: 1px solid #ddd; /* рамка блока новости */
+     padding: 20px; /* внутренний отступ внутри блока новости */
+   }
+
+   .news-title-fut {
+     font-size: 24px;
+     margin-bottom: 10px;
+   }
+
+
+   .display-6 {
+     font-size: 1.25rem; /* размер заголовка H1 для секции "Ligue 1" */
+   }
+
 </style>
 <head>
   <script src="./script/load_time.js"></script>
   <script src="./script/dataLoader.js"></script>
+  <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+  <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
   <meta charset="UTF-8">
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,20 +75,54 @@
   </nav>
 </header>
 <h1>Новости о футболе</h1>
-<section class="news-section">
-<div class="news-item">
-  <h2 class="news-title">Итальянская мафия</h2>
-  <img class="news-image" src="img/footballlogo.jpg" alt="404"><h1>Серия А</h1>
-  <p class="news-content">После матча с «Миланом» на подземной парковке стадиона «Наполи» был найден труп мужчины</p>
-  <img class="news_content_image" src="img/napoli-milan.jpg" alt="404">
-</div>
-<div class="news-item">
-  <h2 class="news-title">Министр спорта Франции осудил нападение фанатов «Марселя» на автобус «Лиона»</h2>
-  <img class="news-image" src="img/footballlogo.jpg" alt="404"><H1>Ligue 1</H1>
-  <p class="news-content">Министр спорта Франции Амели Удеа-Кастера высказалась об инциденте с нападением на автобус «Лиона».
-
-    «Это совершенно ужасно. Это возмутительный акт ненависти и глупости, отрицание ценностей футбола и спорта. Необходимо быстро найти виновных, чтобы они были строго наказаны», – приводит слова Удеа-Кастера RMC Sport.</p>
-  <img class="news_content_image" src="img/Lyon-Marseille-a-quelle-heure-et-sur-quelle-chaine-voir-le-match-1619763.jpg" alt="404">
+<section class="news-section container">
+  <div class="embla">
+    <div class="embla__container">
+      <div class="embla__slide">
+        <div class="news-item-fut">
+          <h2 class="news-title-fut">Итальянская мафия</h2>
+          <img class="news-image img-fluid" src="img/footballlogo.jpg" alt="404">
+          <h1 class="display-6">Серия А</h1>
+          <p class="news-content-fut">После матча с «Миланом» на подземной парковке стадиона «Наполи» был найден труп мужчины.
+            Игра 10-го тура прошла 29 октября и завершилась со счетом 2:2. Тело нашли ночью после игры на паркинге в районе гостевого сектора.
+            Отмечается, что два болельщика хотели без билетов попасть на стадион, но один из них упал с 20-метровой высоты и не выжил.</p>
+          <img class="news_content_image img-fluid" src="img/napoli-milan.jpg" alt="404">
+      </div>
+      </div>
+      <div class="embla__slide">
+        <div class="news-item-fut">
+          <h2 class="news-title-fut">Холода близко...</h2>
+          <img class="news-image img-fluid" src="img/footballlogo.jpg" alt="404">
+          <h1 class="display-6">Российская премьер-лига</h1>
+          <p class="news-content-fut">Председатель правления «Зенита» Медведев призвал решить проблему футбола в мороз
+            «Надо решить проблему зимнего футбола. Я уже сказал, что, если бы у нас было два стадиона с крышами, при наличии Ростова-на-Дону, Краснодара и Сочи мы могли бы составить календарь таким образом, чтобы не играть под снегом никогда.</p>
+        <img class="news_content_image img-fluid" src="https://img.championat.com/s/735x490/news/big/w/x/predsedatel-pravleniya-zenit.jpg" alt="404">
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="embla2">
+    <div class="embla__container">
+      <div class="embla__slide">
+        <div class="news-item-fut">
+          <h2 class="news-title-fut">Министр спорта Франции осудил нападение фанатов «Марселя» на автобус «Лиона»</h2>
+          <img class="news-image img-fluid" src="img/footballlogo.jpg" alt="404">
+          <H1 class="display-6">Ligue 1</H1>
+          <p class="news-content-fut">Министр спорта Франции Амели Удеа-Кастера высказалась об инциденте с нападением на автобус «Лиона».</p>
+          «Это совершенно ужасно. Это возмутительный акт ненависти и глупости, отрицание ценностей футбола и спорта. Необходимо быстро найти виновных, чтобы они были строго наказаны», – приводит слова Удеа-Кастера RMC Sport.
+          <img class="news_content_image img-fluid" src="img/Lyon-Marseille-a-quelle-heure-et-sur-quelle-chaine-voir-le-match-1619763.jpg" alt="404">
+        </div>
+      </div>
+        <div class="embla__slide">
+          <div class="news-item-fut">
+            <h2 class="news-title-fut">Криштиану Роналду забил 50 голов в 2023 году</h2>
+            <img class="news-image img-fluid" src="img/footballlogo.jpg" alt="404">
+            <H1 class="display-6">Саудовская Аравия</H1>
+            <p class="news-content-fut">«Аль-Наср» разгромил «Аль-Шабаб» в 1/4 финала Кубка короля (5:2). Одним из голов в составе саудовской команды отметился форвард Криштиану Роналду. Таким образом, забитый мяч стал для португальца уже 50-м по счёту в 2023 году.</p>
+            <img class="news_content_image img-fluid" src="https://img.championat.com/s/735x490/news/big/f/i/krishtianu-ronaldu-zabil-50-golov-v-2023-godu_17023256832062049678.jpg" alt="404">
+            </div>
+          </div>
+      </div>
 </div>
 </section>
 <section class="comments-section">
@@ -78,6 +142,25 @@
   <h3 class="time_title">Страница загрузилась всего за:</h3>
   <p class="time__duration"></p>
 </section>
+
+<script type="text/javascript">
+  var emblaNode = document.querySelector('.embla')
+  var options = { loop: true } // Зацикливание карусели
+  var plugins = [EmblaCarouselAutoplay()] // С помощью плагина включаем autoplay
+  var embla = EmblaCarousel(emblaNode, options, plugins) // Включение встроенных плагинов
+
+  console.log(emblaApi.slideNodes()) // Доступ к API
+</script>
+
+<script type="text/javascript">
+  var emblaNode = document.querySelector('.embla2')
+  var options = { loop: true } // Зацикливание второй карусели
+  var plugins = [EmblaCarouselAutoplay()] // С помощью плагина включаем autoplay
+  var embla2 = EmblaCarousel(emblaNode, options, plugins) // Включение встроенных плагинов
+
+  console.log(emblaApi.slideNodes()) // Доступ к API
+</script>
+
 </body>
 <footer class="footer">
   <p>&copy; 2023 made by w311</p>

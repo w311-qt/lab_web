@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
   <script src="./script/load_time.js"></script>
   <script src="./script/active_menu.js"></script>
@@ -7,7 +7,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Новости спорта</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
 </head>
 <body class="body">
 <header class="header">
@@ -87,11 +94,67 @@
     <h2> Формула: </h2>
     <p>Скорость света в вакууме: <sup>c</sup> = <em>299,792,458</em> м/с<sup>2</sup></p>
   </section>
+  <style>.swiper {
+    width: 1000px;
+    height: 100%;
+    position: relative;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    width: 60%;
+  }
+
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    right: 0; /* Переместите стрелку вправо по краю картинки */
+    left: auto;
+  }
+
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    left: 0; /* Переместите стрелку влево по краю картинки */
+    right: auto;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }</style>
   <h2>Галерея:</h2>
   <section class="gallery">
-    <img class="gallery_item" src="img/messi.jpg" alt="404">
-    <img class="gallery_item" src="img/ronaldo.jpg" alt="404">
-    <img class="gallery_item" src="img/images.jpg" alt="404">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img class="gallery_item" src="https://pbs.twimg.com/media/FSZfenVaUAItA-v.jpg:large" alt="404"></div>
+        <div class="swiper-slide"><img class="gallery_item" src="img/ronaldo.jpg" alt="404"></div>
+        <div class="swiper-slide"><img class="gallery_item" src="img/images.jpg" alt="404"></div>
+        <div class="swiper-slide"><img src="https://cdnn21.img.ria.ru/images/07e7/0a/1c/1905889680_0:0:1920:1080_1920x0_80_0_0_fc6f8c1aa71d548aa005fd9d84c95139.jpg"
+        ></div>
+        <div class="swiper-slide"><img src="https://sun9-63.userapi.com/impg/PAdHrLOBbkLCSM3Zbnw4piSSk9jr1yapBlLh4w/n2d6w6dYZOM.jpg?size=759x556&quality=96&sign=95ed4be76777657e6451bd4fb2bc97a2&c_uniq_tag=-sFotcR26YyIbaJOjvf5HpL0qwiEOTAzVfxcEEwc_8M&type=album"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
   </section>
   <div class="table-container">
     <div class="table-scroll">
@@ -277,6 +340,26 @@
     <h3 class="time_title">Страница загрузилась всего за:</h3>
     <p class="time__duration"></p>
   </section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+
+  var swiper = new Swiper(".mySwiper", {
+  <!--Опции Swiper-->
+  spaceBetween: 30, <!-- Расстояние между слайдами-->
+  navigation: {
+  nextEl: ".swiper-button-next", <!-- Элемент для переключения на следующий слайд-->
+  prevEl: ".swiper-button-prev", <!-- Элемент для переключения на предыдущий слайд-->
+  },
+  pagination: {
+  el: ".swiper-pagination", <!-- Элемент для отображения пагинации (точек)-->
+  },
+  mousewheel: true, <!-- Включение поддержки прокрутки мышью-->
+  keyboard: true, <!-- Включение поддержки управления клавиатурой-->
+  });
+  </script>
+
 </main>
 
 <footer class="footer">
