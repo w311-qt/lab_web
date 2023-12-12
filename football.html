@@ -142,25 +142,7 @@
   <h3 class="time_title">Страница загрузилась всего за:</h3>
   <p class="time__duration"></p>
 </section>
-
-<script type="text/javascript">
-  var emblaNode = document.querySelector('.embla')
-  var options = { loop: true } // Зацикливание карусели
-  var plugins = [EmblaCarouselAutoplay()] // С помощью плагина включаем autoplay
-  var embla = EmblaCarousel(emblaNode, options, plugins) // Включение встроенных плагинов
-
-  console.log(emblaApi.slideNodes()) // Доступ к API
-</script>
-
-<script type="text/javascript">
-  var emblaNode = document.querySelector('.embla2')
-  var options = { loop: true } // Зацикливание второй карусели
-  var plugins = [EmblaCarouselAutoplay()] // С помощью плагина включаем autoplay
-  var embla2 = EmblaCarousel(emblaNode, options, plugins) // Включение встроенных плагинов
-
-  console.log(emblaApi.slideNodes()) // Доступ к API
-</script>
-
+<script src="./script/embla_script.js"></script>
 </body>
 <footer class="footer">
   <p>&copy; 2023 made by w311</p>
